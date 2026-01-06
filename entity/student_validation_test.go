@@ -13,9 +13,9 @@ func TestValid(t *testing.T){
 
 	t.Run(`student is valid`, func(t *testing.T){
 		user := Student{
-			FullName : "Peerapat",
-			Age : 21,
-			Email : "pee@gmail.com",
+			FullName : "Bobby",
+			Age : 22,
+			Email : "Bobby@gmail.com",
 			GPA : 4.00,
 		}
 
@@ -31,8 +31,8 @@ func TestFullName(t *testing.T){
 	t.Run(`FullName is valid`, func(t *testing.T){
 		user := Student{
 			FullName : "",
-			Age : 21,
-			Email : "pee@gmail.com",
+			Age : 22,
+			Email : "Bobby@gmail.com",
 			GPA : 4.00,
 		}
 
@@ -48,9 +48,9 @@ func TestAge(t *testing.T){
 
 	t.Run(`Age must be at least 18`, func(t *testing.T){
 		user := Student{
-			FullName : "Peerapat",
-			Age : 16,
-			Email : "pee@gmail.com",
+			FullName : "Bobby",
+			Age : 11,
+			Email : "Bobby@gmail.com",
 			GPA : 4.00,
 		}
 
@@ -66,8 +66,8 @@ func TestEmail(t *testing.T){
 
 	t.Run(`Email is required`, func(t *testing.T){
 		user := Student{
-			FullName : "Peerapat",
-			Age : 21,
+			FullName : "Bobby",
+			Age : 22,
 			Email : "",
 			GPA : 4.00,
 		}
@@ -84,10 +84,10 @@ func TestGPA(t *testing.T){
 
 	t.Run(`GPA must be between 0.00 and 4.00`, func(t *testing.T){
 		user := Student{
-			FullName : "Peerapat",
-			Age : 21,
-			Email : "pee@gmail.com",
-			GPA : 5.00,
+			FullName : "Bobby",
+			Age : 22,
+			Email : "Bobby@gmail.com",
+			GPA : 6.00,
 		}
 
 		ok, err := govalidator.ValidateStruct(user)
