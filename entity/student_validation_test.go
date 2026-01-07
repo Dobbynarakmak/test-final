@@ -14,7 +14,7 @@ func TestValid(t *testing.T){
 	t.Run(`student is valid`, func(t *testing.T){
 		user := Student{
 			FullName : "Bobby",
-			Age : 22,
+			Age : 25,
 			Email : "Bobby@gmail.com",
 			GPA : 4.00,
 		}
